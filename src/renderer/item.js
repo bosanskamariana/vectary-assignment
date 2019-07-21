@@ -1,6 +1,7 @@
 import {
   isSelected,
   addToSelected,
+  getSelected,
   removeFromSelected,
   getActiveFilters,
   getItems
@@ -17,6 +18,13 @@ const selectItem = (item) => ({ target }) => {
 
 const startMove = (item) => (event) => {
   event.dataTransfer.setData('text', item.id)
+  // custom drag image just in case item(s) are moved after selection
+  if (isSelected(item)) {
+    const dragImage = document.getElementById('dragImg')
+    const counter = document.getElementById('counter')
+    counter.innerText = getSelected().length
+    event.dataTransfer.setDragImage(dragImage, 50, 50)
+  }
 }
 
 export const createItem = (item) => {

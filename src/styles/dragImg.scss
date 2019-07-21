@@ -1,0 +1,39 @@
+@import './colors.scss';
+
+.dragImg {
+  z-index: 1000;
+  position: fixed;
+  top: 20000px; // hide from screen
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100px;
+  background-color: $grey3;
+  opacity: 0.2;
+  border-radius: 1rem;
+  border: 1px solid $violet;
+
+  &.shifted {
+    top: 10px;
+    left: 10px;
+  }
+}
+
+.counter {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border-radius: 50%;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  width: 1.5rem;
+  color: white;
+  background-color: $violet;
+  border: 1px solid $grey3;
+}
