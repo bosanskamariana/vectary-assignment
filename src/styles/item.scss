@@ -1,0 +1,44 @@
+@import './colors.scss';
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 240px;
+  height: 200px;
+  color: $grey3;
+  background-color: $grey2;
+  border-radius: 1rem;
+  border: none;
+  margin: 1rem;
+
+  &.selected {
+    border: 1px solid $violet;
+
+    .selectBtn {
+      background-color: $grey3;
+    }
+  }
+}
+
+.selectBtn {
+  display: flex;
+  align-self: flex-end;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: $grey2;
+  border: 1px solid $grey3;
+  margin: 0.5rem 0.5rem 0 0;
+}
+
+.content {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex-grow: 4;
+  width: fit-content;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}

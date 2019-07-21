@@ -1,0 +1,39 @@
+@import './colors.scss';
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 300px;
+  min-width: 300px;
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid $grey3;
+}
+
+.filterItem {
+  display: flex;
+  height: 2rem;
+  line-height: 2rem;
+  margin-top: 1rem;
+  width: 80%;
+  list-style-type: none;
+  border-radius: 1rem;
+  color: $grey3;
+  border: 1px solid $grey3;
+  background-color: white;
+  text-indent: 1rem;
+
+  &.selected {
+    color: $grey3;
+    border: 1px solid $grey2;
+    background-color: $grey2;
+  }
+
+  &.dropped {
+    color: white;
+    border: 1px solid $violet;
+    background-color: $violet;
+  }
+}
