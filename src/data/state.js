@@ -63,4 +63,18 @@ export const moveItems = (items, projectId) => {
   setSelected([])
 }
 
-window.state = STATE
+// example of sending data (just stringify object with state)
+export const sendToFakeApi = () => {
+  const url = 'http://example.com/my/fake/api'
+  return window
+    .fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(STATE),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then((res) => res.json())
+    .then((response) => console.log('Success:', JSON.stringify(response)))
+    .catch((error) => console.error('Error:', error))
+}
