@@ -1,6 +1,5 @@
 import './style.scss'
+import { loadInitialData, renderScreen } from './renderer/screen'
 
-const foo = () => {
-  return 'Test'
-}
-console.log(foo())
+loadInitialData()
+renderScreen()
